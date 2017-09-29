@@ -56,8 +56,11 @@ public class LoginActivity extends AppCompatActivity {
             switch (msg.what)
             {
                 case 0:
-                    if(password.equalsIgnoreCase(passwordEdit.getText().toString())&&password!=null&&password.length()>0)
-                        Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                    if(password.equalsIgnoreCase(passwordEdit.getText().toString())&&password!=null&&password.length()>0) {
+                        Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+
+                    }
+
                     else
                         Toast.makeText(LoginActivity.this,"账号密码错误或无效",Toast.LENGTH_LONG).show();
             }
@@ -118,4 +121,13 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this,SignActivity.class);
         startActivity(intent);
     }
+
+    public void qqLogin(View view) {
+        Toast.makeText(LoginActivity.this,"QQ登录暂未开放",Toast.LENGTH_SHORT).show();
+    }
+
+    public void wechatLogin(View view) {
+        Toast.makeText(LoginActivity.this,"微信登录暂未开放",Toast.LENGTH_SHORT).show();
+    }
+
 }

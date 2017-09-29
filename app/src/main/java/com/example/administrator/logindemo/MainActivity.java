@@ -8,8 +8,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.mob.MobSDK;
+
 import java.util.ArrayList;
 import java.util.List;
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+import cn.smssdk.gui.RegisterPage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enterLogin(View view) {
-
         Intent intent = new Intent(MainActivity.this,LoginActivity.class);
         startActivity(intent);
     }
